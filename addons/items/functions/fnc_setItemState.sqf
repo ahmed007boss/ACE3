@@ -70,5 +70,7 @@ private _stateArray = _stateObj getVariable [_varKey, []];
 _stateArray set [_index, _state];
 _stateObj setVariable [_varKey, _stateArray];
 
+[QGVAR(itemStateFieldSet), [_unit, _className, _slot, _index, _updates]] call CBA_fnc_localEvent;
+
 //TRACE_3("setItemState DONE",_unit,_className,_slot);
 _state

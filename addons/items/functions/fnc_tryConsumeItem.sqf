@@ -199,6 +199,7 @@ private _fnc_removeFromSlot = {
     };
     if (!_result) exitWith { [false, "", -1, -1] };
 
+    [QGVAR(itemUsed), [_object, _itemClass, _slot, _ammoBefore, _ammoConfig]] call CBA_fnc_localEvent;
     [true, _slot, _ammoBefore, _ammoConfig]
 };
 

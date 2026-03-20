@@ -188,5 +188,7 @@ if (!isNil "_onDestroyedFn") then {
     [_unit, _className, _slot, _finalStateIdx, _finalItemState, _damageInfo] call _onDestroyedFn;
 };
 
+[QGVAR(itemDestroyed), [_unit, _className, _slot, _finalStateIdx, _finalItemState, _damagedClass, _damageInfo]] call CBA_fnc_localEvent;
+
 true
 
