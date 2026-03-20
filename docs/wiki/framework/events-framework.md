@@ -45,7 +45,17 @@ The vehicle events will also have the following local variables available `_gunn
 |`ace_medical_treatment_bandaged` | [_medic, _patient, _bodyPart, _className, _itemUser, _usedItem, _createLitter, _bandageEffectiveness] | Local | Listen | _medic has bandaged _patient, the array can be modified to change treatment parameters (local to _medic) |
 |`ace_medical_overdose` | [_unit, _medication, _medicationDose, _overdoseThreshold, _incompatibleMed] | Local | Listen | _unit has overdosed on _medication by _overdoseThreshold - _medicationDose, overdoseThreshold was determined by _incompatibleMed (can be _medication itself or mixed incompatible medication) |
 
-### 2.3 Interaction Menu (`ace_interact_menu`)
+### 2.3 Items (`ace_items`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|---------- |------------|----------|------|-------------|
+| `ace_items_itemStateInitialized` | `[unit, className, slot, stateIndex, state]` | Local | Listen | Fired when a new item state HashMap is created; subscribe to add addon-specific fields |
+| `ace_items_itemStateFieldSet` | `[unit, className, slot, index, updates]` | Local | Listen | Fired after item state fields are written; `updates` is `[[key, value], ...]` |
+| `ace_items_itemDestroyed` | `[unit, className, slot, stateIndex, itemState, damagedClass, damageInfo]` | Local | Listen | Fired after an item is destroyed or replaced with a damaged variant; `damagedClass` is `""` when simply removed; `damageInfo` is `[shooter, bodyPart, ammoType, isBackShot]` |
+| `ace_items_itemUsed` | `[unit, className, slot, ammoBefore, ammoConfig]` | Local | Listen | Fired after an item is successfully consumed via `ace_items_fnc_tryConsumeItem`; `ammoBefore` and `ammoConfig` are `-1` for non-magazine items |
+| `ace_items_inventoryChanged` | `[srcObj, destObj, className, srcSlot, destSlot]` | Local | Listen | Fired when an item moves between containers (detected by inventory diff on close or on item pickup) |
+
+### 2.4 Interaction Menu (`ace_interact_menu`)
 MenuType: 0 = Interaction, 1 = Self Interaction
 
 | Event Key | Parameters | Locality | Type | Description |
@@ -54,7 +64,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |`ace_interactMenuClosed` | [_menuType] | Local | Listen | Interaction Menu Closed
 |`ace_interact_menu_newControllableObject` | [_typeOf] | Local | Listen | New controlable object, only fires once per type (add self interactions)
 
-### 2.4 Cargo (`ace_cargo`)
+### 2.5 Cargo (`ace_cargo`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |---------- |------------|----------|------|-------------|
@@ -62,7 +72,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |`ace_cargoLoaded` | [_item, _vehicle] | Global | Listen | Cargo has been Loaded into vehicle |
 |`ace_cargoUnloaded` | [_item, _vehicle, _unloadType] | Global | Listen | Cargo has been Unloaded from vehicle |
 
-### 2.5 Captives (`ace_captives`)
+### 2.6 Captives (`ace_captives`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |---------- |------------|----------|------|-------------|
@@ -71,20 +81,20 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |`ace_captives_setHandcuffed` | [_unit, _state(BOOL)] | Target | Callable | Sets a unit to either start or stop being handcuffed |
 |`ace_captives_escortingCaptive` | [_unit, _state(BOOL), _caller] | Local | Listen | Caller starting or stopping escort of unit |
 
-### 2.6 Settings (`ace_common`)
+### 2.7 Settings (`ace_common`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |---------- |------------|----------|------|-------------|
 |`ace_settingsInitialized` | [] | Local | Listen | All modules are read and settings are ready |
 |`ace_settingChanged` | [_name,_value] | Local | Listen | A setting has been changed |
 
-### 2.7 Tagging (`ace_tagging`)
+### 2.8 Tagging (`ace_tagging`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |---------- |------------|----------|------|-------------|
 |`ace_tagCreated` | [_tagObject, _texture, _tagAttachedTo (can be null), _unitThatCreated] | Global | Listen | Tag is created |
 
-### 2.8 Explosives (`ace_explosives`)
+### 2.9 Explosives (`ace_explosives`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |---------- |------------|----------|------|-------------|
@@ -97,13 +107,13 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |`ace_explosives_defuse` | [_explosive, _unit] | Global | Listen | Explosive is safely defused |
 |`ace_explosives_explodeOnDefuse` | [_explosive, _unit] | Global | Listen | Explosive blows up when trying to defuse |
 
-### 2.9 Logistics Wirecutter (`ace_logistics`)
+### 2.10 Logistics Wirecutter (`ace_logistics`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |---------- |------------|----------|------|-------------|
 |`ace_wireCuttingStarted` | [_unit, _fence] | Global | Listen | Fence cutting started |
 
-### 2.9 Refuel (`ace_refuel`)
+### 2.11 Refuel (`ace_refuel`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |---------- |------------|----------|------|-------------|
@@ -111,7 +121,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |`ace_refuel_tick` | [_source, _target, _amount, _refuelContainer, _nozzle] | Local | Listen | Amount of fuel transferred in a tick |
 |`ace_refuel_stopped` | [_source, _target, _nozzle] | Local | Listen | Refuelling has stopped |
 
-### 2.10 Cook Off (`ace_cookoff`)
+### 2.12 Cook Off (`ace_cookoff`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |---------- |------------|----------|------|-------------|
@@ -119,21 +129,21 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |`ace_cookoff_cookOffBox` | [_box, _source, _instigator, _delay] | Global | Listen | Ammo box cook-off has started |
 |`ace_cookoff_engineFire` | [_vehicle] | Global | Listen | Engine fire has started |
 
-### 2.11 Attach (`ace_attach`)
+### 2.13 Attach (`ace_attach`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|
 |`ace_attach_attached` | [_attachedObject, _itemClassname, _temporary] | Local | Listen | After an item was attached to a unit/vehicle. _temporary flag means a item is being re-attached after the player exits a vehicle |
 |`ace_attach_detaching` | [_attachedObject, _itemName, _temporary] | Local | Listen | Just before an item gets detached/removed from a unit/vehicle. _temporary flag means its detached because the player unit entered a vehicle. |
 
-### 2.12 Trenches (`ace_trenches`)
+### 2.14 Trenches (`ace_trenches`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |---------- |------------|----------|------|-------------|
 | `ace_trenches_placed` | [_unit, _trench] | Global | Listen | After trench object is placed by unit. |
 | `ace_trenches_finished` | [_unit, _trench] | Global | Listen | After trench object is fully dug up by unit (100% progress). |
 
-### 2.13 Medical GUI (`ace_medical_gui`)
+### 2.15 Medical GUI (`ace_medical_gui`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |---------- |------------|----------|------|-------------|
@@ -143,33 +153,33 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 | `ace_medical_gui_updateInjuryListWounds` | [_ctrl, _target, _selectionN, _woundEntries, _bodyPartName] | Local | Listen | Allows mods to update the wounds injury list by pushing to the _woundEntries array
 | `ace_medical_gui_logListAppended` | [_ctrl, _row, _message, _unlocalizedMessage, _timeStamp, _arguments] | Local | Listen | After an entry is appended to the log list
 
-### 2.14 Medical Treatment (`ace_medical_treatment`)
+### 2.16 Medical Treatment (`ace_medical_treatment`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |---------- |------------|----------|------|-------------|
 | `ace_medical_treatment_fullHealLocalMod` | [_patient] | Local | Listen | Called before a local unit is fully healed, mods can listen and apply their own healing logic
 
-### 2.15 Medical Status (`ace_medical_status`)
+### 2.17 Medical Status (`ace_medical_status`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |---------- |------------|----------|------|-------------|
 | `ace_medical_status_getBloodLoss` | [_unit, _bloodLoss] | Local | Listen | Called when blood loss is calculated for a unit, mods can listen and modify the blood loss value by modifying the array
 
-### 2.16 Interaction (`ace_interaction`)
+### 2.18 Interaction (`ace_interaction`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |---------- |------------|----------|------|-------------|
 | `ace_interaction_doorOpeningStarted` | [_house, _door, _animations] | Local | Listen | Called when local unit starts interacting with doors
 | `ace_interaction_doorOpeningStopped` | [_house, _door, _animations] | Local | Listen | Called when local unit stops interacting with doors
 
-### 2.17 Headless (`ace_headless`)
+### 2.19 Headless (`ace_headless`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |---------- |------------|----------|------|-------------|
 | `ace_headless_groupTransferPre` | [_group, _HC (OBJECT), _previousOwner, _idHC] | Target | Listen | Called just before a group is transferred from any machine to a HC. Called where group currently is local and on the HC, where group is going to be local.
 | `ace_headless_groupTransferPost` | [_group, _HC (OBJECT), _previousOwner, _idHC, _transferredSuccessfully] | Target | Listen | Called just after a group is transferred from a machine to a HC. Called where group was local and on the HC, where group is now local. `_transferredSuccessfully` is passed so mods can actually check if the locality was properly transferred, as ownership transfer is not guaranteed.
 
-### 2.18 Dragging (`ace_dragging`)
+### 2.20 Dragging (`ace_dragging`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |---------- |------------|----------|------|-------------|
@@ -182,7 +192,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 | `ace_dragging_startedDrag` | [_unit, _target] | Local | Listen | Called when the unit starts successfully dragging the target. This event is called after `ace_dragging_setupDrag`.
 | `ace_dragging_stoppedDrag` | [_unit, _target] | Local | Listen | Called when the unit stops dragging the target
 
-### 2.19 HuntIR (`ace_huntir`)
+### 2.21 HuntIR (`ace_huntir`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |---------- |------------|----------|------|-------------|
@@ -194,7 +204,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 | `ace_huntir_monitorConnected` | [_unit, _huntir] | Local | Listen | Called when the monitor is connected
 | `ace_huntir_monitorNoGDS` | [_unit] | Local | Listen | Called when the monitor found no GDS
 
-### 2.20 Mine detector (`ace_minedetector`)
+### 2.22 Mine detector (`ace_minedetector`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |---------- |------------|----------|------|-------------|
@@ -202,7 +212,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 | `ace_minedetector_detectorDisabled` | [_unit, _detectorType] | Local | Listen | Called when local unit turned off their mine detector
 | `ace_minedetector_mineDetected` | [_unit, _mine, _distance, _detectorType] | Local | Listen | Called when local unit has detected a mine
 
-#### 2.21 PBO checking (`ace_common`)
+#### 2.23 PBO checking (`ace_common`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |---------- |------------|----------|------|-------------|

@@ -346,7 +346,7 @@ class CfgVehicles {
             class ACE_Equipment {
                 displayName = CSTRING(Equipment);
                 condition = QUOTE(true);
-                exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
+                exceptions[] = { "isNotInside", "notOnMap", "isNotSitting"};
                 statement = "";
                 showDisabled = 1;
                 icon = "";  // @todo

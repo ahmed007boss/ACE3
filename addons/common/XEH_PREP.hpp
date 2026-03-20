@@ -206,6 +206,7 @@ PREP(throwWeapon);
 PREP(unhideUnit);
 PREP(uniqueElements);
 PREP(uniqueItems);
+PREP(uniqueItemsAndEquipment);
 PREP(uniqueUnitItems);
 PREP(unloadPerson);
 PREP(unloadPersonLocal);

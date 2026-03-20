@@ -133,6 +133,82 @@ _target setVariable [format ["ace_interaction_animsItems_%1", _anim], ["B_Tactic
 _target setVariable ["ace_interaction_animsItems_HideBackpacks", [], true];
 ```
 
+### 2.3 Per-item (Weapon Class) interactions
+
+`ACE_ItemInteractions` is a `CfgWeapons`-level class that binds interaction actions directly to an item class. When a unit carries the item, the actions are automatically injected into `ACE_SelfActions > ACE_Equipment` (self) and `ACE_MainActions` (external target).
+
+{% raw %}
+```cpp
+class CfgWeapons {
+    class ACE_ItemCore;
+
+    class Apple: ACE_ItemCore {
+        class ACE_ItemInteractions {
+            class eatApple {
+                displayName  = "Eat Apple";
+                condition    = "_this call myAddon_fnc_canEat";
+                statement    = "_this call myAddon_fnc_eatApple";
+                icon         = "\z\myAddon\ui\eat.paa";
+                exceptions[] = {"notOnMap"};
+                showDisabled = 0;
+                showOnSelf   = 1;
+                showOnTarget = 0;
+            };
+            class cutApple {
+                displayName  = "Cut Apple";
+                condition    = "_this call myAddon_fnc_hasKnife";
+                statement    = "_this call myAddon_fnc_cutApple";
+                icon         = "\z\myAddon\ui\cut.paa";
+                exceptions[] = {"notOnMap"};
+                showDisabled = 1;
+                showOnSelf   = 1;
+                showOnTarget = 0;
+            };
+        };
+    };
+};
+```
+{% endraw %}
+
+#### Root entry fields (directly on `ACE_ItemInteractions`)
+
+| Field | Type | Default | Description |
+|---|---|---|---|
+| `displayName` | String | Item `displayName` | Label for the root entry |
+| `icon` | String | Item `picture` | Icon for the root entry |
+| `condition` | String (code) | `{true}` | When the root entry is visible |
+| `itemDisplayName` | String | Item `displayName` | Label for each per-instance row in the multi-instance submenu |
+| `itemIcon` | String | Item `picture` | Icon for each per-instance row |
+| `itemCondition` | String (code) | `{true}` | When each per-instance row is visible |
+
+#### Sub-action fields (nested classes inside `ACE_ItemInteractions`)
+
+All fields from class interactions (§2.1) are supported. Two additional fields control which menus the action appears in:
+
+| Field | Type | Description |
+|---|---|---|
+| `showOnSelf` | Number | `1` = include in self-action menu (`ACE_SelfActions > ACE_Equipment`) |
+| `showOnTarget` | Number | `1` = include in external target-action menu (`ACE_MainActions`) |
+
+#### Params in `condition` and `statement`
+
+Sub-action code receives the specific item instance location via `_args`:
+
+```sqf
+params ["_unit", "", "_args"];
+_args params [["_slot", "", [""]], ["_index", -1, [0]], ["_itemClassName", "", [""]]];
+// _slot          — slot the item is in (e.g. "vestItems", "assigned")
+// _index         — occurrence index within that slot (0-based)
+// _itemClassName — classname of the item
+```
+
+#### Single vs. multiple instances
+
+- **One instance in inventory** — sub-actions inject directly under the root entry; no intermediate submenu.
+- **Multiple instances** — each instance gets its own submenu row labelled `"<itemDisplayName> (<Slot>)"` (or `"<itemDisplayName> (<Slot>) #N"` when more than one instance shares the same slot). Row label and icon come from `itemDisplayName` / `itemIcon`, falling back to the item's `displayName` and `picture`.
+
+---
+
 ## 3. Adding actions via scripts
 
 Two steps, creating an action (array) and then adding it to either a class or object.

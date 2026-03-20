@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Items">
+        <Key ID="STR_ACE_Items_BlockBackpackUsage_Description">
+            <English>When enabled (and usage restrictions are on), items with usage restrictions cannot be used from the backpack for any operation.</English>
+            <French>Quand activé (et les restrictions d'utilisation sont activées), les objets avec restrictions ne peuvent pas être utilisés depuis le sac à dos.</French>
+            <Spanish>Cuando está activado (y las restricciones de uso están activas), los objetos con restricciones no pueden usarse desde la mochila.</Spanish>
+            <Italian>Quando abilitato (e le restrizioni uso sono attive), gli oggetti con restrizioni non possono essere usati dallo zaino.</Italian>
+            <Polish>Gdy włączone (i ograniczenia użycia są aktywne), przedmiotów z ograniczeniami nie można używać z plecaka.</Polish>
+            <Portuguese>Quando ativado (e restrições de uso estão ativas), itens com restrições não podem ser usados da mochila.</Portuguese>
+            <Russian>При включении (и при активных ограничениях использования) предметы с ограничениями нельзя использовать из рюкзака.</Russian>
+            <German>Wenn aktiviert (und Nutzungsbeschränkungen aktiv), können Gegenstände mit Einschränkungen nicht aus dem Rucksack verwendet werden.</German>
+            <Korean>활성화 시 (및 사용 제한이 켜져 있을 때) 제한이 있는 아이템은 배낭에서 사용할 수 없습니다.</Korean>
+            <Japanese>有効にすると（使用制限がオンの場合）、制限のあるアイテムはバックパックから使用できません。</Japanese>
+            <Chinese>启用后（且使用限制开启时），有限制的物品无法从背包中使用。</Chinese>
+            <Chinesesimp>启用后（且使用限制开启时），有限制的物品无法从背包中使用。</Chinesesimp>
+            <Turkish>Etkinleştirildiğinde (ve kullanım kısıtlamaları açıksa), kısıtlamalı öğeler sırt çantasından kullanılamaz.</Turkish>
+            <Hungarian>Engedélyezve (és a használati korlátozások bekapcsolva) a korlátozásos tárgyak nem használhatók a hátizsákból.</Hungarian>
+            <Ukrainian>Увімкнено (і обмеження використання активні): предмети з обмеженнями не можна використовувати з рюкзака.</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_BlockBackpackUsage_DisplayName">
+            <English>Block backpack usage</English>
+            <French>Bloquer l'utilisation depuis le sac à dos</French>
+            <Spanish>Bloquear uso desde mochila</Spanish>
+            <Italian>Blocca uso da zaino</Italian>
+            <Polish>Blokuj użycie z plecaka</Polish>
+            <Portuguese>Bloquear uso da mochila</Portuguese>
+            <Russian>Запретить использование из рюкзака</Russian>
+            <German>Nutzung aus Rucksack blockieren</German>
+            <Korean>배낭 사용 차단</Korean>
+            <Japanese>バックパックからの使用をブロック</Japanese>
+            <Chinese>禁止从背包使用</Chinese>
+            <Chinesesimp>禁止从背包使用</Chinesesimp>
+            <Turkish>Sırt çantasından kullanımı engelle</Turkish>
+            <Hungarian>Hátizsákból való használat tiltása</Hungarian>
+            <Ukrainian>Заборонити використання з рюкзака</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_DestroyChanceFactor_Description">
+            <English>Global multiplier applied to per-item destroy chance on hit. 1 = default, higher values increase chance.</English>
+            <French>Multiplicateur global appliqué à la chance de destruction par objet. 1 = défaut, valeurs plus élevées augmentent la chance.</French>
+            <Spanish>Multiplicador global aplicado a la probabilidad de destrucción por objeto. 1 = predeterminado, valores mayores aumentan la probabilidad.</Spanish>
+            <Italian>Moltiplicatore globale applicato alla probabilità di distruzione per oggetto. 1 = predefinito, valori più alti aumentano la probabilità.</Italian>
+            <Polish>Globalny mnożnik stosowany do szansy zniszczenia na przedmiot. 1 = domyślny, wyższe wartości zwiększają szansę.</Polish>
+            <Portuguese>Multiplicador global aplicado à chance de destruição por item. 1 = padrão, valores maiores aumentam a chance.</Portuguese>
+            <Russian>Глобальный множитель вероятности разрушения для каждого предмета. 1 = по умолчанию, большие значения увеличивают вероятность.</Russian>
+            <German>Globaler Multiplikator für die Zerstörungswahrscheinlichkeit pro Gegenstand. 1 = Standard, höhere Werte erhöhen die Chance.</German>
+            <Korean>아이템별 파괴 확률에 적용되는 전역 승수. 1 = 기본값, 높은 값은 확률을 높입니다.</Korean>
+            <Japanese>アイテムごとの破壊確率に適用されるグローバル乗数。1 = デフォルト、高い値で確率が上がります。</Japanese>
+            <Chinese>应用于每件物品命中破坏概率的全局乘数。1 = 默认，值越高概率越大。</Chinese>
+            <Chinesesimp>应用于每件物品命中破坏概率的全局乘数。1 = 默认，值越高概率越大。</Chinesesimp>
+            <Turkish>Öğe başına yıkılma şansına uygulanan genel çarpan. 1 = varsayılan, yüksek değerler şansı artırır.</Turkish>
+            <Hungarian>Elemenkénti megsemmisítési esélyre alkalmazott globális szorzó. 1 = alapértelmezett, magasabb értékek növelik az esélyt.</Hungarian>
+            <Ukrainian>Глобальний множник для ймовірності знищення на предмет. 1 = за замовчуванням, вищі значення збільшують ймовірність.</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_DestroyChanceFactor_DisplayName">
+            <English>Destroy chance factor</English>
+            <French>Facteur de chance de destruction</French>
+            <Spanish>Factor de probabilidad de destrucción</Spanish>
+            <Italian>Fattore probabilità distruzione</Italian>
+            <Polish>Współczynnik szansy zniszczenia</Polish>
+            <Portuguese>Fator de chance de destruição</Portuguese>
+            <Russian>Коэффициент вероятности разрушения</Russian>
+            <German>Zerstörungswahrscheinlichkeitsfaktor</German>
+            <Korean>파괴 확률 계수</Korean>
+            <Japanese>破壊確率係数</Japanese>
+            <Chinese>破坏概率系数</Chinese>
+            <Chinesesimp>破坏概率系数</Chinesesimp>
+            <Turkish>Yıkılma şansı faktörü</Turkish>
+            <Hungarian>Megsemmisítési esély szorzó</Hungarian>
+            <Ukrainian>Коефіцієнт ймовірності знищення</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_DisplayName">
+            <English>Items</English>
+            <French>Objets</French>
+            <Spanish>Objetos</Spanish>
+            <Italian>Oggetti</Italian>
+            <Polish>Przedmioty</Polish>
+            <Portuguese>Itens</Portuguese>
+            <Russian>Предметы</Russian>
+            <German>Gegenstände</German>
+            <Korean>아이템</Korean>
+            <Japanese>アイテム</Japanese>
+            <Chinese>物品</Chinese>
+            <Chinesesimp>物品</Chinesesimp>
+            <Turkish>Öğeler</Turkish>
+            <Hungarian>Tárgyak</Hungarian>
+            <Ukrainian>Предмети</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_EnableDestroyableItems_Description">
+            <English>When enabled, items can be destroyed and replaced with damaged variants when the associated body part is hit.</English>
+            <French>Quand activé, les objets peuvent être détruits et remplacés par des variantes endommagées lors d'un impact.</French>
+            <Spanish>Cuando está activado, los objetos pueden destruirse y reemplazarse por variantes dañadas al ser golpeados.</Spanish>
+            <Italian>Quando abilitato, gli oggetti possono essere distrutti e sostituiti con varianti danneggiate al colpo.</Italian>
+            <Polish>Gdy włączone, przedmioty mogą być niszczone i zastępowane uszkodzonymi wariantami przy uderzeniu.</Polish>
+            <Portuguese>Quando ativado, itens podem ser destruídos e substituídos por variantes danificadas ao serem atingidos.</Portuguese>
+            <Russian>При включении предметы могут быть разрушены и заменены повреждёнными вариантами при попадании.</Russian>
+            <German>Wenn aktiviert, können Gegenstände bei Treffer zerstört und durch beschädigte Varianten ersetzt werden.</German>
+            <Korean>활성화 시 아이템이 맞을 때 파괴되고 손상된 변형으로 교체될 수 있습니다.</Korean>
+            <Japanese>有効にすると、ヒット時にアイテムが破壊され、損傷バリアントに置き換えられます。</Japanese>
+            <Chinese>启用后，物品在命中时可能被破坏并替换为损坏变体。</Chinese>
+            <Chinesesimp>启用后，物品在命中时可能被破坏并替换为损坏变体。</Chinesesimp>
+            <Turkish>Etkinleştirildiğinde, vuruşta öğeler yıkılabilir ve hasarlı varyantlarla değiştirilebilir.</Turkish>
+            <Hungarian>Engedélyezve az ütközéskor a tárgyak megsemmisíthetők és sérült változatokra cserélhetők.</Hungarian>
+            <Ukrainian>Увімкнено: предмети можуть бути знищені та замінені пошкодженими варіантами при попаданні.</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_EnableDestroyableItems_DisplayName">
+            <English>Enable destroyable items</English>
+            <French>Activer les objets destructibles</French>
+            <Spanish>Activar objetos destructibles</Spanish>
+            <Italian>Abilita oggetti distruttibili</Italian>
+            <Polish>Włącz przedmioty niszczalne</Polish>
+            <Portuguese>Ativar itens destrutíveis</Portuguese>
+            <Russian>Включить разрушаемые предметы</Russian>
+            <German>Zerstörbare Gegenstände aktivieren</German>
+            <Korean>파괴 가능한 아이템 활성화</Korean>
+            <Japanese>破壊可能アイテムを有効にする</Japanese>
+            <Chinese>启用可破坏物品</Chinese>
+            <Chinesesimp>启用可破坏物品</Chinesesimp>
+            <Turkish>Yıkılabilir öğeleri etkinleştir</Turkish>
+            <Hungarian>Megsemmisíthető tárgyak engedélyezése</Hungarian>
+            <Ukrainian>Увімкнути руйновані предмети</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_EnableUsableItemRestrictions_Description">
+            <English>When enabled, items with usage restrictions can only be used from allowed containers (e.g. vest, uniform, backpack).</English>
+            <French>Quand activé, les objets avec restrictions ne peuvent être utilisés que depuis les conteneurs autorisés.</French>
+            <Spanish>Cuando está activado, los objetos con restricciones solo pueden usarse desde contenedores permitidos.</Spanish>
+            <Italian>Quando abilitato, gli oggetti con restrizioni possono essere usati solo da contenitori consentiti.</Italian>
+            <Polish>Gdy włączone, przedmioty z ograniczeniami można używać tylko z dozwolonych kontenerów.</Polish>
+            <Portuguese>Quando ativado, itens com restrições só podem ser usados de contêineres permitidos.</Portuguese>
+            <Russian>При включении предметы с ограничениями можно использовать только из разрешённых контейнеров.</Russian>
+            <German>Wenn aktiviert, können Gegenstände mit Einschränkungen nur aus erlaubten Containern verwendet werden.</German>
+            <Korean>활성화 시 제한이 있는 아이템은 허용된 컨테이너에서만 사용할 수 있습니다.</Korean>
+            <Japanese>有効にすると、制限のあるアイテムは許可されたコンテナからのみ使用できます。</Japanese>
+            <Chinese>启用后，有限制的物品只能从允许的容器中使用。</Chinese>
+            <Chinesesimp>启用后，有限制的物品只能从允许的容器中使用。</Chinesesimp>
+            <Turkish>Etkinleştirildiğinde, kısıtlamalı öğeler yalnızca izin verilen konteynerlerden kullanılabilir.</Turkish>
+            <Hungarian>Engedélyezve a korlátozásos tárgyak csak engedélyezett tárolókból használhatók.</Hungarian>
+            <Ukrainian>Увімкнено: предмети з обмеженнями можна використовувати лише з дозволених контейнерів.</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_EnableUsableItemRestrictions_DisplayName">
+            <English>Enable usable item restrictions</English>
+            <French>Activer les restrictions d'utilisation</French>
+            <Spanish>Activar restricciones de uso</Spanish>
+            <Italian>Abilita restrizioni uso</Italian>
+            <Polish>Włącz ograniczenia użycia</Polish>
+            <Portuguese>Ativar restrições de uso</Portuguese>
+            <Russian>Включить ограничения использования</Russian>
+            <German>Nutzungsbeschränkungen aktivieren</German>
+            <Korean>사용 제한 활성화</Korean>
+            <Japanese>使用制限を有効にする</Japanese>
+            <Chinese>启用可用物品限制</Chinese>
+            <Chinesesimp>启用可用物品限制</Chinesesimp>
+            <Turkish>Kullanım kısıtlamalarını etkinleştir</Turkish>
+            <Hungarian>Használati korlátozások engedélyezése</Hungarian>
+            <Ukrainian>Увімкнути обмеження використання</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_GenericDestroyedItem_Description">
+            <English>An item damaged by combat, impact, or rough handling; it will not function properly until repaired or replaced.</English>
+            <French>Un objet endommagé par combat, impact ou manutention brutale; il ne fonctionnera pas correctement jusqu'à ce qu'il soit réparé ou remplacé.</French>
+            <Spanish>Un objeto dañado por combate, impacto o manejo brusco; no funcionará correctamente hasta que sea reparado o reemplazado.</Spanish>
+            <Italian>Un oggetto danneggiato da combattimento, impatto o manutenzione brutale; non funzionerà correttamente finché non sarà riparato o sostituito.</Italian>
+            <Polish>Uszkodzony przedmiot przez walkę, uderzenie lub niesprzyjające traktowanie; nie będzie działać poprawnie, dopóki nie zostanie naprawiony lub zastąpiony.</Polish>
+            <Portuguese>Item danificado por combate, impacto ou manuseio brusco; não funcionará corretamente até ser reparado ou substituído.</Portuguese>
+            <Russian>Предмет, поврежденный боем, ударом или грубым обращением; он не будет работать правильно, пока не будет отремонтирован или заменен.</Russian>
+            <German>Ein Objekt, das durch Kampf, Einschlag oder unachtsame Handhabung beschädigt wurde; es funktioniert nicht richtig, bis es repariert oder ersetzt wird.</German>
+            <Korean>전투, 충돌 또는 거친 처리로 인해 손상된 아이템; 수리 또는 교체 전까지 정상적으로 작동하지 않습니다.</Korean>
+            <Japanese>戦闘、衝突、または粗い取り扱いによって損傷したアイテムで、修理または交換されるまで正常に機能しません。</Japanese>
+            <Chinese>由战斗、撞击或粗暴处理损坏的物品，在修复或更换之前无法正常工作。</Chinese>
+            <Chinesesimp>由战斗、撞击或粗暴处理损坏的物品，在修复或更换之前无法正常工作。</Chinesesimp>
+            <Turkish>Savaş, çarpma veya kaba işleme ile hasarlanmış bir öğe; onarılana veya değiştirilene kadar doğru çalışmaz.</Turkish>
+            <Hungarian>Harci, ütközés vagy durva kezelés miatt sérült tárgy; javításáig vagy helyettesítéséig nem fog helyesen működni.</Hungarian>
+            <Ukrainian>Предмет, пошкоджений боєм, ударом або грубим поводженням; він не буде працювати правильно, поки його не відремонтують або не замість нього.</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_GenericDestroyedItem_DisplayName">
+            <English>Destroyed item</English>
+            <French>Objet détruit</French>
+            <Spanish>Objeto destruido</Spanish>
+            <Italian>Oggetto distrutto</Italian>
+            <Polish>Uszkodzony przedmiot</Polish>
+            <Portuguese>Item destruído</Portuguese>
+            <Russian>Поврежденный предмет</Russian>
+            <German>Zerstörtes Objekt</German>
+            <Korean>손상된 아이템</Korean>
+            <Japanese>損壊したアイテム</Japanese>
+            <Chinese>损坏的物品</Chinese>
+            <Chinesesimp>损坏的物品</Chinesesimp>
+            <Turkish>Hasar görmüş öğe</Turkish>
+            <Hungarian>Sérült tárgy</Hungarian>
+            <Ukrainian>Пошкоджений предмет</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_GenericEmptyBatteryDevice_Description">
+            <English>Replace with a charged battery to use.</English>
+            <French>Remplacer par une batterie chargée pour utiliser.</French>
+            <Spanish>Sustituya por una batería cargada para usar.</Spanish>
+            <Italian>Sostituire con una batteria carica per usare.</Italian>
+            <Polish>Zamień na naładowaną baterię, aby używać.</Polish>
+            <Portuguese>Substitua por uma bateria carregada para usar.</Portuguese>
+            <Russian>Замените на заряженную батарею для использования.</Russian>
+            <German>Zum Verwenden durch einen geladenen Akku ersetzen.</German>
+            <Korean>사용하려면 충전된 배터리로 교체하세요.</Korean>
+            <Japanese>使用するには充電済みバッテリーに交換してください。</Japanese>
+            <Chinese>请更换为已充电电池后使用。</Chinese>
+            <Chinesesimp>请更换为已充电电池后使用。</Chinesesimp>
+            <Turkish>Kullanmak için şarjlı pil ile değiştirin.</Turkish>
+            <Hungarian>Cserélje feltöltött akkumulátorra a használathoz.</Hungarian>
+            <Ukrainian>Замініть на заряджену батарею для використання.</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_GenericEmptyBatteryDevice_DisplayName">
+            <English>Empty battery</English>
+            <French>Batterie vide</French>
+            <Spanish>Batería vacía</Spanish>
+            <Italian>Batteria scarica</Italian>
+            <Polish>Pusta bateria</Polish>
+            <Portuguese>Bateria vazia</Portuguese>
+            <Russian>Разряженная батарея</Russian>
+            <German>Leere Batterie</German>
+            <Korean>빈 배터리</Korean>
+            <Japanese>空のバッテリー</Japanese>
+            <Chinese>空電池</Chinese>
+            <Chinesesimp>空电池</Chinesesimp>
+            <Turkish>Boş pil</Turkish>
+            <Hungarian>Üres akkumulátor</Hungarian>
+            <Ukrainian>Порожня батарея</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_ItemDestroyChanceOnHit_Description">
+            <English>Chance that %1 is destroyed when the body part associated with its current container is hit.</English>
+            <French>Probabilité que %1 soit détruit lorsque la partie du corps associée au conteneur actuel est frappée.</French>
+            <Spanish>Probabilidad de que %1 se destruya cuando la parte del cuerpo asociada con su contenedor actual es golpeada.</Spanish>
+            <Italian>Probabilità che %1 venga distrutto quando la parte del corpo associata al suo contenitore attuale viene colpita.</Italian>
+            <Polish>Prawdopodobieństwo zniszczenia %1 przy uderzeniu części ciała związanej z jego aktualnym kontenerem.</Polish>
+            <Portuguese>Probabilidade de %1 ser destruído quando a parte do corpo associada ao seu contêiner atual for atingida.</Portuguese>
+            <Russian>Вероятность разрушения %1 при попадании части тела, связанной с его текущим контейнером.</Russian>
+            <German>Wahrscheinlichkeit, dass %1 bei Treffer einer Körperteil, die mit seinem aktuellen Container verbunden ist, zerstört wird.</German>
+            <Korean>%1 히트 시 파괴 확률</Korean>
+            <Japanese>%1 ヒット時の破壊確率</Japanese>
+            <Chinese>%1 命中时破坏概率</Chinese>
+            <Chinesesimp>%1 命中时破坏概率</Chinesesimp>
+            <Turkish>%1 vuruşta yıkılma şansı</Turkish>
+            <Hungarian>%1 ütközéskor valódi lehetősége</Hungarian>
+            <Ukrainian>%1 знищення шанс при попаданні</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_ItemDestroyChanceOnHit_DisplayName">
+            <English>Destroy chance on hit</English>
+            <French>Chance de destruction lors d'un coup</French>
+            <Spanish>Probabilidad de destrucción al ser golpeado</Spanish>
+            <Italian>Probabilità di distruzione al colpo</Italian>
+            <Polish>Prawdopodobieństwo zniszczenia przy uderzeniu</Polish>
+            <Portuguese>Probabilidade de destruição ao ser atingido</Portuguese>
+            <Russian>Вероятность разрушения при попадании</Russian>
+            <German>Wahrscheinlichkeit für Zerstörung bei Treffer</German>
+            <Korean>히트 시 파괴 확률</Korean>
+            <Japanese>ヒット時の破壊確率</Japanese>
+            <Chinese>命中时破坏概率</Chinese>
+            <Chinesesimp>命中时破坏概率</Chinesesimp>
+            <Turkish>Vuruşta yıkılma şansı</Turkish>
+            <Hungarian>Ütközéskor valódi lehetősége</Hungarian>
+            <Ukrainian>Знищення шанс при попаданні</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_ItemOperationModeContainerBlacklist_Description">
+            <English>Comma-separated container classnames. Empty = block none. Only used when restriction mode is "All containers".</English>
+            <French>Classes de conteneurs séparées par des virgules. Vide = ne bloquer aucun. Utilisé uniquement lorsque le mode de restriction est "Liste blanche/noire par classe de conteneur".</French>
+            <Spanish>Clases de contenedores separadas por comas. Vacío = no bloquear ninguno. Solo se usa cuando el modo de restricción es "Lista blanca/negra por clase de contenedor".</Spanish>
+            <Italian>Classi contenitori separate da virgole. Vuoto = non bloccare nessuno. Usato solo quando la modalità di restrizione è "Whitelist/blacklist per classe contenitore".</Italian>
+            <Polish>Klasy kontenerów oddzielone przecinkami. Puste = nie blokuj żadnego. Używane tylko gdy tryb ograniczeń to "Lista dozwolonych/zakazanych według klasy kontenera".</Polish>
+            <Portuguese>Classes de contêineres separadas por vírgulas. Vazio = não bloquear nenhum. Usado apenas quando o modo de restrição é "Lista branca/negra por classe de contêiner".</Portuguese>
+            <Russian>Классы контейнеров через запятую. Пусто = не блокировать. Используется только когда режим ограничения "Белый/черный список по классу контейнера".</Russian>
+            <German>Container-Klassen kommagetrennt. Leer = keine blockieren. Nur verwendet wenn Einschränkungsmodus "Whitelist/Blacklist nach Container-Klasse" ist.</German>
+            <Korean>쉼표로 구분된 컨테이너 클래스. 비어 있음 = 차단 없음. 제한 모드가 "컨테이너 클래스별 화이트리스트/블랙리스트"일 때만 사용됩니다.</Korean>
+            <Japanese>カンマ区切りのコンテナクラス。空 = ブロックなし。制限モードが「コンテナクラス別ホワイトリスト/ブラックリスト」の場合のみ使用。</Japanese>
+            <Chinese>逗号分隔的容器类。空 = 不阻止任何。仅在限制模式为“按容器类别的白名单/黑名单”时使用。</Chinese>
+            <Chinesesimp>逗号分隔的容器类。空 = 不阻止任何。仅在限制模式为“按容器类别的白名单/黑名单”时使用。</Chinesesimp>
+            <Turkish>Virgülle ayrılmış konteyner sınıfları. Boş = hiçbirini engelleme. Yalnızca kısıtlama modu "Konteyner sınıfına göre beyaz/kara liste" olduğunda kullanılır.</Turkish>
+            <Hungarian>Vesszővel elválasztott tároló osztályok. Üres = egyiket sem tiltja. Csak akkor használatos, ha a korlátozási mód "Fehér/fekete lista tároló osztály szerint".</Hungarian>
+            <Ukrainian>Класи контейнерів через кому. Порожньо = не блокувати жодного. Використовується лише коли режим обмеження "Білий/чорний список за класом контейнера".</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_ItemOperationModeContainerBlacklist_DisplayName">
+            <English>Blacklist containers classnames</English>
+            <French>Classes de conteneurs en liste noire</French>
+            <Spanish>Clases de contenedores en lista negra</Spanish>
+            <Italian>Classi contenitori blacklist</Italian>
+            <Polish>Klasy kontenerów na liście zakazanych</Polish>
+            <Portuguese>Classes de contêineres na lista negra</Portuguese>
+            <Russian>Классы контейнеров в черном списке</Russian>
+            <German>Blacklist Container-Klassen</German>
+            <Korean>블랙리스트 컨테이너 클래스</Korean>
+            <Japanese>ブラックリストコンテナクラス</Japanese>
+            <Chinese>黑名单容器类</Chinese>
+            <Chinesesimp>黑名单容器类</Chinesesimp>
+            <Turkish>Kara liste konteyner sınıfları</Turkish>
+            <Hungarian>Blacklist tároló osztályok</Hungarian>
+            <Ukrainian>Класи контейнерів у чорному списку</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_ItemOperationModeContainerWhitelist_Description">
+            <English>Comma-separated container classnames. Empty = allow all. Only used when restriction mode is "All containers".</English>
+            <French>Classes de conteneurs séparées par des virgules. Vide = tout autoriser. Utilisé uniquement lorsque le mode de restriction est "Liste blanche/noire par classe de conteneur".</French>
+            <Spanish>Clases de contenedores separadas por comas. Vacío = permitir todo. Solo se usa cuando el modo de restricción es "Lista blanca/negra por clase de contenedor".</Spanish>
+            <Italian>Classi contenitori separate da virgole. Vuoto = consenti tutto. Usato solo quando la modalità di restrizione è "Whitelist/blacklist per classe contenitore".</Italian>
+            <Polish>Klasy kontenerów oddzielone przecinkami. Puste = zezwól na wszystko. Używane tylko gdy tryb ograniczeń to "Lista dozwolonych/zakazanych według klasy kontenera".</Polish>
+            <Portuguese>Classes de contêineres separadas por vírgulas. Vazio = permitir todos. Usado apenas quando o modo de restrição é "Lista branca/negra por classe de contêiner".</Portuguese>
+            <Russian>Классы контейнеров через запятую. Пусто = разрешить все. Используется только когда режим ограничения "Белый/черный список по классу контейнера".</Russian>
+            <German>Container-Klassen kommagetrennt. Leer = alle erlauben. Nur verwendet wenn Einschränkungsmodus "Whitelist/Blacklist nach Container-Klasse" ist.</German>
+            <Korean>쉼표로 구분된 컨테이너 클래스. 비어 있음 = 모두 허용. 제한 모드가 "컨테이너 클래스별 화이트리스트/블랙리스트"일 때만 사용됩니다.</Korean>
+            <Japanese>カンマ区切りのコンテナクラス。空 = すべて許可。制限モードが「コンテナクラス別ホワイトリスト/ブラックリスト」の場合のみ使用。</Japanese>
+            <Chinese>逗号分隔的容器类。空 = 允许全部。仅在限制模式为“按容器类别的白名单/黑名单”时使用。</Chinese>
+            <Chinesesimp>逗号分隔的容器类。空 = 允许全部。仅在限制模式为“按容器类别的白名单/黑名单”时使用。</Chinesesimp>
+            <Turkish>Virgülle ayrılmış konteyner sınıfları. Boş = hepsine izin ver. Yalnızca kısıtlama modu "Konteyner sınıfına göre beyaz/kara liste" olduğunda kullanılır.</Turkish>
+            <Hungarian>Vesszővel elválasztott tároló osztályok. Üres = mindent engedélyez. Csak akkor használatos, ha a korlátozási mód "Fehér/fekete lista tároló osztály szerint".</Hungarian>
+            <Ukrainian>Класи контейнерів через кому. Порожньо = дозволити все. Використовується лише коли режим обмеження "Білий/чорний список за класом контейнера".</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_ItemOperationModeContainerWhitelist_DisplayName">
+            <English>Whitelist containers classnames</English>
+            <French>Classes de conteneurs en liste blanche</French>
+            <Spanish>Clases de contenedores en lista blanca</Spanish>
+            <Italian>Classi contenitori whitelist</Italian>
+            <Polish>Klasy kontenerów na liście dozwolonych</Polish>
+            <Portuguese>Classes de contêineres na lista branca</Portuguese>
+            <Russian>Классы контейнеров в белом списке</Russian>
+            <German>Whitelist Container-Klassen</German>
+            <Korean>화이트리스트 컨테이너 클래스</Korean>
+            <Japanese>ホワイトリストコンテナクラス</Japanese>
+            <Chinese>白名单容器类</Chinese>
+            <Chinesesimp>白名单容器类</Chinesesimp>
+            <Turkish>Beyaz liste konteyner sınıfları</Turkish>
+            <Hungarian>Whitelist tároló osztályok</Hungarian>
+            <Ukrainian>Класи контейнерів у білому списку</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_ItemOperationModeContainer_Description">
+            <English>Allowed container set for %1 while using %2.</English>
+            <French>Conteneurs autorisés pour %1 lors de l'utilisation de %2.</French>
+            <Spanish>Contenedores permitidos para %1 al usar %2.</Spanish>
+            <Italian>Contenitori consentiti per %1 durante l'utilizzo di %2.</Italian>
+            <Polish>Dozwolone kontenery dla %1 podczas używania %2.</Polish>
+            <Portuguese>Contêineres permitidos para %1 ao usar %2.</Portuguese>
+            <Russian>Разрешенные контейнеры для %1 при использовании %2.</Russian>
+            <German>Erlaubte Container für %1 bei Verwendung von %2.</German>
+            <Korean>%1 %2 사용 시 허용된 컨테이너 세트.</Korean>
+            <Japanese>%1 %2 使用時に許可されたコンテナセット。</Japanese>
+            <Chinese>%1 %2 使用时允许的容器集合。</Chinese>
+            <Chinesesimp>%1 %2 使用时允许的容器集合。</Chinesesimp>
+            <Turkish>%1 %2 kullanırken izin verilen kapsayıcı seti.</Turkish>
+            <Hungarian>%1 %2 engedélyezett konténerkészlet a használatakor.</Hungarian>
+            <Ukrainian>%1 %2 дозволені контейнери при використанні %2.</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_ItemOperationModeDisallowedInAir_Description">
+            <English>If enabled, %1 cannot be used while the unit is in the air (e.g. falling) in operation mode %2.</English>
+            <French>Si activé, %1 ne peut pas être utilisé lorsque l'unité est en l'air (par exemple en chute) dans le mode d'opération %2.</French>
+            <Spanish>Si activado, %1 no puede ser utilizado cuando la unidad está en el aire (por ejemplo en caída) en el modo de operación %2.</Spanish>
+            <Italian>Se attivato, %1 non può essere utilizzato quando l'unità è in aria (ad esempio in caduta) nel modo di operazione %2.</Italian>
+            <Polish>Jeśli włączone, %1 nie może być używany kiedy jednostka jest w powietrzu (np. w spadku) w trybie operacji %2.</Polish>
+            <Portuguese>Se ativado, %1 não pode ser usado quando a unidade está em ar (por exemplo, em queda) no modo de operação %2.</Portuguese>
+            <Russian>Если включено, %1 не может использоваться когда единица находится в воздухе (например, в падении) в режиме операции %2.</Russian>
+            <German>Wenn aktiviert, %1 kann nicht verwendet werden, wenn die Einheit im Luftraum (z. B. beim Fallen) im Betriebsmodus %2 ist.</German>
+            <Korean>%1 비행기 속에서 사용 금지</Korean>
+            <Japanese>%1 空中で使用禁止</Japanese>
+            <Chinese>%1 禁止在空中使用</Chinese>
+            <Chinesesimp>%1 禁止在空中使用</Chinesesimp>
+            <Turkish>%1  havada kullanımı engelle</Turkish>
+            <Hungarian>%1  légi használat tiltása</Hungarian>
+            <Ukrainian>%1  забороняти використання в повітрі</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_ItemOperationModeDisallowedInAir_DisplayName">
+            <English>Disallow while in air</English>
+            <French>Interdire en l'air</French>
+            <Spanish>Prohibir en el aire</Spanish>
+            <Italian>Impedire in aria</Italian>
+            <Polish>Zabraniać w powietrzu</Polish>
+            <Portuguese>Impedir em ar</Portuguese>
+            <Russian>Запретить в воздухе</Russian>
+            <German>Luftbenutzung verbieten</German>
+            <Korean>%1 비행기 속에서 금지</Korean>
+            <Japanese>%1 空中で禁止</Japanese>
+            <Chinese>%1 禁止在空中使用</Chinese>
+            <Chinesesimp>%1 禁止在空中使用</Chinesesimp>
+            <Turkish>%1  havada  engelle</Turkish>
+            <Hungarian>%1  légi  tiltása</Hungarian>
+            <Ukrainian>%1  забороняти в повітрі</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_ItemOperationModeDisallowedInBackpack_Description">
+            <English>If enabled, %1 cannot be used from the backpack in operation mode %2.</English>
+        </Key>
+        <Key ID="STR_ACE_Items_ItemOperationModeDisallowedInBackpack_DisplayName">
+            <English>Disallow from backpack</English>
+            <French>Interdire du sac à dos</French>
+            <Spanish>Prohibir del mochila</Spanish>
+            <Italian>Impedire dal zaino</Italian>
+            <Polish>Zabraniać z plecaka</Polish>
+            <Portuguese>Impedir do mochila</Portuguese>
+            <Russian>Запретить из рюкзака</Russian>
+            <German>Rucksackbenutzung verbieten</German>
+            <Korean>%1 백팩에서 금지</Korean>
+            <Japanese>%1 バックパックから禁止</Japanese>
+            <Chinese>%1 背包中使用禁止</Chinese>
+            <Chinesesimp>%1 背包中使用禁止</Chinesesimp>
+            <Turkish>%1  çantadan  engelle</Turkish>
+            <Hungarian>%1  hordozótáskából  tiltása</Hungarian>
+            <Ukrainian>%1  забороняти з рюкзака</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_ItemOperationModeDisallowedInUniform_Description">
+            <English>If enabled, %1 cannot be used from the uniform in operation mode %2.</English>
+        </Key>
+        <Key ID="STR_ACE_Items_ItemOperationModeDisallowedInUniform_DisplayName">
+            <English>Disallow from uniform</English>
+            <French>Interdire du uniforme</French>
+            <Spanish>Prohibir del uniforme</Spanish>
+            <Italian>Impedire dal uniforme</Italian>
+            <Polish>Zabraniać z ekipażu</Polish>
+            <Portuguese>Impedir do uniforme</Portuguese>
+            <Russian>Запретить из экипировки</Russian>
+            <German>Uniformbenutzung verbieten</German>
+            <Korean>%1 유닛에서 금지</Korean>
+            <Japanese>%1 ユニフォームから禁止</Japanese>
+            <Chinese>%1 服装中使用禁止</Chinese>
+            <Chinesesimp>%1 服装中使用禁止</Chinesesimp>
+            <Turkish>%1  ekipajdan  engelle</Turkish>
+            <Hungarian>%1  egyenruhából  tiltása</Hungarian>
+            <Ukrainian>%1  забороняти з екипіровки</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_ItemOperationModeDisallowedInVehicles_Description">
+            <English>If enabled, %1 cannot be used while the unit is inside a vehicle in operation mode %2.</English>
+            <French>Si activé, %1 ne peut pas être utilisé lorsque l'unité est à l'intérieur d'un véhicule dans le mode d'opération %2.</French>
+            <Spanish>Si activado, %1 no puede ser utilizado cuando la unidad está dentro de un vehículo en el modo de operación %2.</Spanish>
+            <Italian>Se attivato, %1 non può essere utilizzato quando l'unità è all'interno di un veicolo nel modo di operazione %2.</Italian>
+            <Polish>Jeśli włączone, %1 nie może być używany kiedy jednostka jest w pojeździe w trybie operacji %2.</Polish>
+            <Portuguese>Se ativado, %1 não pode ser usado quando a unidade está dentro de um veículo no modo de operação %2.</Portuguese>
+            <Russian>Если включено, %1 не может использоваться когда единица находится внутри транспортного средства в режиме операции %2.</Russian>
+            <German>Wenn aktiviert, %1 kann nicht verwendet werden, wenn die Einheit in einem Fahrzeug im Betriebsmodus %2 ist.</German>
+            <Korean>%1 차량 속에서 사용 금지</Korean>
+            <Japanese>%1 車両の中で使用禁止</Japanese>
+            <Chinese>%1 禁止在车辆中使用</Chinese>
+            <Chinesesimp>%1 禁止在车辆中使用</Chinesesimp>
+            <Turkish>%1  aracında kullanımı engelle</Turkish>
+            <Hungarian>%1  járműben használat tiltása</Hungarian>
+            <Ukrainian>%1  забороняти використання в транспортних засобах</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_ItemOperationModeDisallowedInVehicles_DisplayName">
+            <English>Disallow in vehicles</English>
+            <French>Interdire dans les véhicules</French>
+            <Spanish>Prohibir en vehículos</Spanish>
+            <Italian>Impedire in veicoli</Italian>
+            <Polish>Zabraniać w pojeździe</Polish>
+            <Portuguese>Impedir em veículos</Portuguese>
+            <Russian>Запретить в транспортных средствах</Russian>
+            <German>Fahrzeugbenutzung verbieten</German>
+            <Korean>%1 차량 속에서 사용 금지</Korean>
+            <Japanese>%1 車両の中で禁止</Japanese>
+            <Chinese>%1 禁止在车辆中使用</Chinese>
+            <Chinesesimp>%1 禁止在车辆中使用</Chinesesimp>
+            <Turkish>%1  aracında  engelle</Turkish>
+            <Hungarian>%1  járműben  tiltása</Hungarian>
+            <Ukrainian>%1  забороняти в транспортних засобах</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_ItemOperationModeDisallowedInVest_Description">
+            <English>If enabled, %1 cannot be used from the vest in operation mode %2.</English>
+            <French>Si activé, %1 ne peut pas être utilisé du gilet dans le mode d'opération %2.</French>
+            <Spanish>Si activado, %1 no puede ser utilizado del gilet en el modo de operación %2.</Spanish>
+            <Italian>Se attivato, %1 non può essere utilizzato dal gilet nel modo di operazione %2.</Italian>
+            <Polish>Jeśli włączone, %1 nie może być używany z gilotiny w trybie operacji %2.</Polish>
+            <Portuguese>Se ativado, %1 não pode ser usado do gilet no modo de operação %2.</Portuguese>
+            <Russian>Если включено, %1 не может использоваться из экипировки в режиме операции %2.</Russian>
+            <German>Wenn aktiviert, %1 kann nicht vom Gilet im Betriebsmodus %2 verwendet werden.</German>
+            <Korean>%1 유닛에서 금지</Korean>
+            <Japanese>%1 ユニフォームから禁止</Japanese>
+            <Chinese>%1 服装中使用禁止</Chinese>
+            <Chinesesimp>%1 服装中使用禁止</Chinesesimp>
+            <Turkish>%1  ekipajdan  engelle</Turkish>
+            <Hungarian>%1  egyenruhából  tiltása</Hungarian>
+            <Ukrainian>%1  забороняти з екипіровки</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_ItemOperationModeDisallowedInVest_DisplayName">
+            <English>Disallow from vest</English>
+            <French>Interdire du gilet</French>
+            <Spanish>Prohibir del gilet</Spanish>
+            <Italian>Impedire dal gilet</Italian>
+            <Polish>Zabraniać z gilotiny</Polish>
+            <Portuguese>Impedir do gilet</Portuguese>
+            <Russian>Запретить из экипировки</Russian>
+            <German>Giletbenutzung verbieten</German>
+            <Korean>%1 유닛에서 금지</Korean>
+            <Japanese>%1 ユニフォームから禁止</Japanese>
+            <Chinese>%1 服装中使用禁止</Chinese>
+            <Chinesesimp>%1 服装中使用禁止</Chinesesimp>
+            <Turkish>%1  ekipajdan  engelle</Turkish>
+            <Hungarian>%1  egyenruhából  tiltása</Hungarian>
+            <Ukrainian>%1  забороняти з екипіровки</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_ItemOperationModeDisallowedUnderwater_Description">
+            <English>If enabled, %1 cannot be used while underwater in operation mode %2.</English>
+            <French>Si activé, %1 ne peut pas être utilisé sous l'eau dans le mode d'opération %2.</French>
+            <Spanish>Si activado, %1 no puede ser utilizado bajo el agua en el modo de operación %2.</Spanish>
+            <Italian>Se attivato, %1 non può essere utilizzato mentre è sotto l'acqua nel modo di operazione %2.</Italian>
+            <Polish>Jeśli włączone, %1 nie może być używany podczas nurkowania w trybie operacji %2.</Polish>
+            <Portuguese>Se ativado, %1 não pode ser usado enquanto está submerso no modo de operação %2.</Portuguese>
+            <Russian>Если включено, %1 не может использоваться под водой в режиме операции %2.</Russian>
+            <German>Wenn aktiviert, %1 kann nicht unter Wasser im Betriebsmodus %2 verwendet werden.</German>
+            <Korean>%1 물 속에서 사용 금지</Korean>
+            <Japanese>%1 水の中で使用禁止</Japanese>
+            <Chinese>%1 禁止在水下使用</Chinese>
+            <Chinesesimp>%1 禁止在水下使用</Chinesesimp>
+            <Turkish>%1  su altında kullanımı engelle</Turkish>
+            <Hungarian>%1  víz alatti használat tiltása</Hungarian>
+            <Ukrainian>%1  забороняти використання під водою</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_ItemOperationModeDisallowedUnderwater_DisplayName">
+            <English>Disallow underwater</English>
+            <French>Interdire l'utilisation sous l'eau</French>
+            <Spanish>Prohibir bajo el agua</Spanish>
+            <Italian>Impedire in acqua</Italian>
+            <Polish>Zabraniać pod wodą</Polish>
+            <Portuguese>Impedir em água</Portuguese>
+            <Russian>Запретить использование под водой</Russian>
+            <German>Unterwasserbenutzung verbieten</German>
+            <Korean>물 속에서 사용 금지</Korean>
+            <Japanese>水の中で使用禁止</Japanese>
+            <Chinese>禁止在水下使用</Chinese>
+            <Chinesesimp>禁止在水下使用</Chinesesimp>
+            <Turkish>Su altında kullanımı engelle</Turkish>
+            <Hungarian>Víz alatti használat tiltása</Hungarian>
+            <Ukrainian>Забороняти використання під водою</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_ItemOperationModeDisallowedWhenAssigned_Description">
+            <English>If enabled, %1 cannot %2 when it assigned in (headgear, goggles, radio, GPS, etc.).</English>
+            <French>Si activé, %1 ne peut pas %2 lorsqu'il est assigné (casque, lunettes, radio, GPS, etc.).</French>
+            <Spanish>Si activado, %1 no puede %2 cuando está asignado (casco, gafas, radio, GPS, etc.).</Spanish>
+            <Italian>Se attivato, %1 non può %2 quando è assegnato (casco, occhiali, radio, GPS, etc.).</Italian>
+            <Polish>Jeśli włączone, %1 nie może %2 kiedy jest przypisany (kapelusz, okulary, radio, GPS, etc.).</Polish>
+            <Portuguese>Se ativado, %1 não pode %2 quando está atribuído (capacete, óculos, rádio, GPS, etc.).</Portuguese>
+            <Russian>Если включено, %1 не может %2 когда он назначен (шапка, очки, радио, GPS, etc.).</Russian>
+            <German>Wenn aktiviert, %1 kann nicht %2 werden, wenn es zugewiesen ist (Kappe, Brille, Radio, GPS, etc.).</German>
+            <Korean>%1 할당될 때 %2 금지</Korean>
+            <Japanese>%1 割り当てられたとき %2 禁止</Japanese>
+            <Chinese>%1 分配时 %2 禁止</Chinese>
+            <Chinesesimp>%1 分配时 %2 禁止</Chinesesimp>
+            <Turkish>%1  atanırken %2  engelle</Turkish>
+            <Hungarian>%1  hozzárendelve %2  tiltása</Hungarian>
+            <Ukrainian>%1  присвоєно %2  забороняти</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_ItemOperationModeDisallowedWhenAssigned_DisplayName">
+            <English>Disallow when assigned</English>
+            <French>Interdire lorsqu'il est assigné</French>
+            <Spanish>Prohibir cuando está asignado</Spanish>
+            <Italian>Impedire quando è assegnato</Italian>
+            <Polish>Zabraniać kiedy jest przypisany</Polish>
+            <Portuguese>Impedir quando está atribuído</Portuguese>
+            <Russian>Запретить когда он назначен</Russian>
+            <German>Zuweisung verbieten</German>
+            <Korean>%1 할당될 때 금지</Korean>
+            <Japanese>%1 割り当てられたとき 禁止</Japanese>
+            <Chinese>%1 分配时 禁止</Chinese>
+            <Chinesesimp>%1 分配时 禁止</Chinesesimp>
+            <Turkish>%1  atanırken  engelle</Turkish>
+            <Hungarian>%1  hozzárendelve  tiltása</Hungarian>
+            <Ukrainian>%1  присвоєно  забороняти</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_ItemOperationModeDisallowedWhenEquipped_Description">
+            <English>If enabled, %1 cannot %2 when it is equipped (e.g. worn or mounted).</English>
+            <French>Si activé, %1 ne peut pas %2 lorsqu'il est équipé (e.g. porté ou monté).</French>
+            <Spanish>Si activado, %1 no puede %2 cuando está equipado (e.g. portado o montado).</Spanish>
+            <Italian>Se attivato, %1 non può %2 quando è equipaggiato (e.g. portato o montato).</Italian>
+            <Polish>Jeśli włączone, %1 nie może %2 kiedy jest ekwipowany (e.g. noszony lub montowany).</Polish>
+            <Portuguese>Se ativado, %1 não pode %2 quando está equipado (e.g. portado ou montado).</Portuguese>
+            <Russian>Если включено, %1 не может %2 когда он экипирован (e.g. носимый или монтируемый).</Russian>
+            <German>Wenn aktiviert, %1 kann nicht %2 werden, wenn es eingekleidet ist (e.g. getragen oder montiert).</German>
+            <Korean>%1 장착될 때 %2 금지</Korean>
+            <Japanese>%1 装着時 %2 禁止</Japanese>
+            <Chinese>%1 装备时 %2 禁止</Chinese>
+            <Chinesesimp>%1 装备时 %2 禁止</Chinesesimp>
+            <Turkish>%1  eşya olarak kullanılırken %2  engelle</Turkish>
+            <Hungarian>%1  egyenruházásakor %2  tiltása</Hungarian>
+            <Ukrainian>%1  при носінні або монтажі %2  забороняти</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_ItemOperationModeDisallowedWhenEquipped_DisplayName">
+            <English>Disallow while equipped</English>
+            <French>Interdire lorsqu'il est équipé</French>
+            <Spanish>Prohibir cuando está equipado</Spanish>
+            <Italian>Impedire quando è equipaggiato</Italian>
+            <Polish>Zabraniać kiedy jest ekwipowany</Polish>
+            <Portuguese>Impedir quando está equipado</Portuguese>
+            <Russian>Запретить когда он экипирован</Russian>
+            <German>Eingekleidung verbieten</German>
+            <Korean>%1 장착될 때 금지</Korean>
+            <Japanese>%1 装着時 禁止</Japanese>
+            <Chinese>%1 装备时 禁止</Chinese>
+            <Chinesesimp>%1 装备时 禁止</Chinesesimp>
+            <Turkish>%1  eşya olarak kullanılırken  engelle</Turkish>
+            <Hungarian>%1  egyenruházásakor  tiltása</Hungarian>
+            <Ukrainian>%1  при носінні або монтажі  забороняти</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_ItemOperationModeRestrictions_Label">
+            <English>Restrictions</English>
+            <French>Restrictions</French>
+            <Spanish>Restricciones</Spanish>
+            <Italian>Restrizioni</Italian>
+            <Polish>Ograniczenia</Polish>
+            <Portuguese>Restrições</Portuguese>
+            <Russian>Ограничения</Russian>
+            <German>Einschränkungen</German>
+            <Korean>제한</Korean>
+            <Japanese>制限</Japanese>
+            <Chinese>限制</Chinese>
+            <Chinesesimp>限制</Chinesesimp>
+            <Turkish>Kısıtlamalar</Turkish>
+            <Hungarian>Korlátozások</Hungarian>
+            <Ukrainian>Обмеження</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_OperationModeContainer_AllContainers">
+            <English>All containers (vest, uniform, backpack). Optional whitelist/blacklist by container class.</English>
+            <French>Tous les conteneurs</French>
+            <Spanish>Todos los contenedores</Spanish>
+            <Italian>Tutti i contenitori</Italian>
+            <Polish>Wszystkie pojemniki</Polish>
+            <Portuguese>Todos os contêineres</Portuguese>
+            <Russian>Все контейнеры</Russian>
+            <German>Alle Container</German>
+            <Korean>모든 컨테이너</Korean>
+            <Japanese>すべてのコンテナ</Japanese>
+            <Chinese>所有容器</Chinese>
+            <Chinesesimp>所有容器</Chinesesimp>
+            <Turkish>Tüm konteynerler</Turkish>
+            <Hungarian>Minden tároló</Hungarian>
+            <Ukrainian>Усі контейнери</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_OperationModeContainer_AssignedAndAllContainers">
+            <English>Assigned slot and all containers</English>
+        </Key>
+        <Key ID="STR_ACE_Items_OperationModeContainer_AssignedAndBackpacks">
+            <English>Assigned slot and backpacks</English>
+        </Key>
+        <Key ID="STR_ACE_Items_OperationModeContainer_AssignedAndUniforms">
+            <English>Assigned slot and uniforms</English>
+        </Key>
+        <Key ID="STR_ACE_Items_OperationModeContainer_AssignedAndUniformsAndBackpacks">
+            <English>Assigned slot, uniforms and backpacks</English>
+        </Key>
+        <Key ID="STR_ACE_Items_OperationModeContainer_AssignedAndVests">
+            <English>Assigned slot and vests</English>
+        </Key>
+        <Key ID="STR_ACE_Items_OperationModeContainer_AssignedAndVestsAndBackpacks">
+            <English>Assigned slot, vests and backpacks</English>
+        </Key>
+        <Key ID="STR_ACE_Items_OperationModeContainer_AssignedAndVestsAndUniforms">
+            <English>Assigned slot, vests and uniforms</English>
+        </Key>
+        <Key ID="STR_ACE_Items_OperationModeContainer_AssignedOnly">
+            <English>Assigned slot only</English>
+        </Key>
+        <Key ID="STR_ACE_Items_OperationModeContainer_BackpacksOnly">
+            <English>Backpacks only</English>
+            <French>Sacs à dos uniquement</French>
+            <Spanish>Mochilas únicamente</Spanish>
+            <Italian>Zaini solo</Italian>
+            <Polish>Tylko plecaki</Polish>
+            <Portuguese>Mochilas apenas</Portuguese>
+            <Russian>Только рюкзаки</Russian>
+            <German>Nur Rucksäcke</German>
+            <Korean>배낭만</Korean>
+            <Japanese>バックパックのみ</Japanese>
+            <Chinese>仅限背包</Chinese>
+            <Chinesesimp>仅限背包</Chinesesimp>
+            <Turkish>Sadece sırt çantaları</Turkish>
+            <Hungarian>Csak hátizsákok</Hungarian>
+            <Ukrainian>Лише рюкзаки</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_OperationModeContainer_CustomContainers">
+            <English>Custom containers classes</English>
+            <French>Classes de conteneurs personnalisés</French>
+            <Spanish>Clases de contenedores personalizados</Spanish>
+            <Italian>Classi di contenitori personalizzati</Italian>
+            <Polish>Klasy pojemników niestandardowych</Polish>
+            <Portuguese>Classes de contêineres personalizados</Portuguese>
+            <Russian>Классы пользовательских контейнеров</Russian>
+            <German>Benutzerdefinierte Container-Klassen</German>
+            <Korean>사용자 정의 컨테이너 클래스</Korean>
+            <Japanese>カスタムコンテナクラス</Japanese>
+            <Chinese>自定义容器类</Chinese>
+            <Chinesesimp>自定义容器类</Chinesesimp>
+            <Turkish>Özel konteyner sınıfları</Turkish>
+            <Hungarian>Egyedi tároló osztályok</Hungarian>
+            <Ukrainian>Класи власних контейнерів</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_OperationModeContainer_UniformsAndBackpacks">
+            <English>Uniforms and backpacks</English>
+            <French>Combinaisons vêtements/sac à dos</French>
+            <Spanish>Combinaciones de uniforme/mochila</Spanish>
+            <Italian>Combinazioni uniforme/mochila</Italian>
+            <Polish>Kombinacje ubiór/plecak</Polish>
+            <Portuguese>Combinações uniforme/mochila</Portuguese>
+            <Russian>Комбинации одежды/рюкзака</Russian>
+            <German>Kombinationen Uniform/Rucksack</German>
+            <Korean>옷/배낭 조합</Korean>
+            <Japanese>服/バックパックの組み合わせ</Japanese>
+            <Chinese>衣服/背包组合</Chinese>
+            <Chinesesimp>衣服/背包组合</Chinesesimp>
+            <Turkish>Kıyafet/çanta kombinasyonu</Turkish>
+            <Hungarian>Ruha/táska kombináció</Hungarian>
+            <Ukrainian>Комбінація одягу/рюкзака</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_OperationModeContainer_UniformsOnly">
+            <English>Uniforms only</English>
+            <French>Uniformes uniquement</French>
+            <Spanish>Uniformes únicamente</Spanish>
+            <Italian>Uniformi solo</Italian>
+            <Polish>Tylko mundury</Polish>
+            <Portuguese>Uniformes apenas</Portuguese>
+            <Russian>Только формы</Russian>
+            <German>Nur Uniformen</German>
+            <Korean>유니폼만</Korean>
+            <Japanese>ユニフォームのみ</Japanese>
+            <Chinese>仅限制服</Chinese>
+            <Chinesesimp>仅限制服</Chinesesimp>
+            <Turkish>Sadece üniformalar</Turkish>
+            <Hungarian>Csak egyenruhák</Hungarian>
+            <Ukrainian>Лише форми</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_OperationModeContainer_VestsAndBackpacks">
+            <English>Vests and backpacks</English>
+            <French>Vêtements et sacs à dos</French>
+            <Spanish>Vestimentas y mochilas</Spanish>
+            <Italian>Vesti e sacchi a dosi</Italian>
+            <Polish>Kurtki i plecaki</Polish>
+            <Portuguese>Vestimentas e mochilas</Portuguese>
+            <Russian>Одежда и рюкзаки</Russian>
+            <German>Westen und Rucksäcke</German>
+            <Korean>옷/배낭 조합</Korean>
+            <Japanese>服/バックパックの組み合わせ</Japanese>
+            <Chinese>衣服/背包组合</Chinese>
+            <Chinesesimp>衣服/背包组合</Chinesesimp>
+            <Turkish>Kıyafet/çanta kombinasyonu</Turkish>
+            <Hungarian>Ruha/táska kombináció</Hungarian>
+            <Ukrainian>Комбінація одягу/рюкзака</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_OperationModeContainer_VestsAndUniforms">
+            <English>Vests and uniforms</English>
+            <French>Vêtements et uniformes</French>
+            <Spanish>Vestimentas y uniformes</Spanish>
+            <Italian>Vesti e uniformi</Italian>
+            <Polish>Kurtki i ubiory</Polish>
+            <Portuguese>Vestimentas e uniformes</Portuguese>
+            <Russian>Одежда и униформы</Russian>
+            <German>Westen und Uniformen</German>
+            <Korean>옷/유니폼 조합</Korean>
+            <Japanese>服/ユニフォームの組み合わせ</Japanese>
+            <Chinese>衣服/制服组合</Chinese>
+            <Chinesesimp>衣服/制服组合</Chinesesimp>
+            <Turkish>Kıyafet/formül kombinasyonu</Turkish>
+            <Hungarian>Ruha/formál kombináció</Hungarian>
+            <Ukrainian>Комбінація одягу/уніформ</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_OperationModeContainer_VestsOnly">
+            <English>Vests only</English>
+            <French>Vêtements uniquement</French>
+            <Spanish>Vestimentas únicamente</Spanish>
+            <Italian>Vesti solo</Italian>
+            <Polish>Tylko kurtki</Polish>
+            <Portuguese>Vestimentas apenas</Portuguese>
+            <Russian>Только одежда</Russian>
+            <German>Nur Westen</German>
+            <Korean>옷만</Korean>
+            <Japanese>衣のみ</Japanese>
+            <Chinese>只有衣服</Chinese>
+            <Chinesesimp>只有衣服</Chinesesimp>
+            <Turkish>Sadece kıyafet</Turkish>
+            <Hungarian>Csak ruha</Hungarian>
+            <Ukrainian>Лише одяг</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_OperationModeUse">
+            <English>Use</English>
+            <French>Utiliser</French>
+            <Spanish>Usar</Spanish>
+            <Italian>Usare</Italian>
+            <Polish>Używać</Polish>
+            <Portuguese>Usar</Portuguese>
+            <Russian>Использовать</Russian>
+            <German>Verwenden</German>
+            <Korean>사용</Korean>
+            <Japanese>使用</Japanese>
+            <Chinese>使用</Chinese>
+            <Chinesesimp>使用</Chinesesimp>
+            <Turkish>Kullan</Turkish>
+            <Hungarian>Használni</Hungarian>
+            <Ukrainian>Використовувати</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_Subcategory_DestroyableItems">
+            <English>Destroyable Items</English>
+            <French>Objets destructibles</French>
+            <Spanish>Objetos destructibles</Spanish>
+            <Italian>Oggetti distruttibili</Italian>
+            <Polish>Przedmioty niszczalne</Polish>
+            <Portuguese>Itens destrutíveis</Portuguese>
+            <Russian>Разрушаемые предметы</Russian>
+            <German>Zerstörbare Gegenstände</German>
+            <Korean>파괴 가능한 아이템</Korean>
+            <Japanese>破壊可能アイテム</Japanese>
+            <Chinese>可破坏物品</Chinese>
+            <Chinesesimp>可破坏物品</Chinesesimp>
+            <Turkish>Yıkılabilir öğeler</Turkish>
+            <Hungarian>Megsemmisíthető tárgyak</Hungarian>
+            <Ukrainian>Руйновані предмети</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Items_Subcategory_UsableItemRestrictions">
+            <English>Usable Item Restrictions</English>
+            <French>Restrictions d'utilisation des objets</French>
+            <Spanish>Restricciones de uso de objetos</Spanish>
+            <Italian>Restrizioni uso oggetti</Italian>
+            <Polish>Ograniczenia użycia przedmiotów</Polish>
+            <Portuguese>Restrições de uso de itens</Portuguese>
+            <Russian>Ограничения использования предметов</Russian>
+            <German>Nutzungsbeschränkungen für Gegenstände</German>
+            <Korean>사용 가능한 아이템 제한</Korean>
+            <Japanese>使用可能アイテム制限</Japanese>
+            <Chinese>可用物品限制</Chinese>
+            <Chinesesimp>可用物品限制</Chinesesimp>
+            <Turkish>Kullanılabilir öğe kısıtlamaları</Turkish>
+            <Hungarian>Használható tárgy korlátozások</Hungarian>
+            <Ukrainian>Обмеження використання предметів</Ukrainian>
+        </Key>
+    </Package>
+</Project>
